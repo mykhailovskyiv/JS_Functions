@@ -16,7 +16,7 @@ var thirdLine = $(".third_line");
 
 $(document).ready(function () {
   function checkWidth() {
-    var windowWidth = $('body').innerWidth();
+    var windowWidth = $('body').innerWidth(); // чистый js - document.body.clientWidth;
     if (windowWidth >= 1280) {
       tagNameTwo.css("display", "none");
       tagName.css("display", "none");
@@ -63,7 +63,7 @@ $(document).ready(function () {
 // Если разрешение меньше 1280
 $(document).ready(function () {
   function checkWidth() {
-    var windowWidth = $('body').innerWidth();
+    var windowWidth = $('body').innerWidth(); // чистый js - document.body.clientWidth;
     if (windowWidth <= 1279) {
       $(window).scroll(function () {
         var top = $(this).scrollTop();
