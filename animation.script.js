@@ -14,7 +14,7 @@ var thirdLine = $(".third_line");
 
 //Если разрешение больше 1280
 
-$(document).ready(function () {
+$(document).ready(function () { // js - document.addEventListener('DOMContentLoaded', function ()
   function checkWidth() {
     var windowWidth = $('body').innerWidth(); // чистый js - document.body.clientWidth;
     if (windowWidth >= 1280) {
@@ -60,8 +60,10 @@ $(document).ready(function () {
     checkWidth(); // проверит при изменении размера окна клиента
   });
 });
+
+
 // Если разрешение меньше 1280
-$(document).ready(function () {
+$(document).ready(function () { //document.addEventListener('DOMContentLoaded', function ()
   function checkWidth() {
     var windowWidth = $('body').innerWidth(); // чистый js - document.body.clientWidth;
     if (windowWidth <= 1279) {
@@ -110,6 +112,28 @@ $(document).ready(function () {
     checkWidth(); // проверит при изменении размера окна клиента
   });
 });
+///////////
+
+    $('.menu').on('click', function () {
+        $('.menu').css("display", "none");
+            $('.close-menu').css("display", "block");
+            $('.close-menu').css("color", "white");
+
+            $('#mobile-menu-block').css("display", "block");
+        
+    });
+    $(window).scroll(function () {
+        var top = $(this).scrollTop();
+        if (top >= 100) {
+            $('.close-menu').css("color", "black");
+        } else if (top <= 200) {
+            $('.close-menu').css("color", "white");
+        } 
+    }); 
+
+//////////////
+
+
 //Подчеркивание заголовков на главной странице
 
 AOS.init({
