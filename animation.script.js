@@ -135,6 +135,7 @@ $(document).ready(function () { //document.addEventListener('DOMContentLoaded', 
 
 
 //Подчеркивание заголовков на главной странице
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 AOS.init({
   // Global settings:
